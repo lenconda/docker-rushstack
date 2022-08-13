@@ -10,7 +10,6 @@ COPY rgu/package.json /rgu/package.json
 WORKDIR /rgu
 RUN sudo npm i
 WORKDIR /
-RUN sudo ln -s /rgu/rush-github-utils.js /usr/local/bin/rgu 
+RUN sudo ln -s /rgu/rush-github-utils.js /usr/local/bin/rgu
 RUN sudo chmod +x /usr/local/bin/rgu
 RUN rgu
-
