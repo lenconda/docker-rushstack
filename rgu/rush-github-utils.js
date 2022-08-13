@@ -40,5 +40,10 @@ program
             repo,
             pull_number: result.data.number.toString(),
         });
+        await octokit.request('DELETE /repos/{owner}/{repo}/git/refs/heads/{ref}', {
+            owner,
+            repo,
+            ref: head,
+        });
     })
     .parse(process.argv);
